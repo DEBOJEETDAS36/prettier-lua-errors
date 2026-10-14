@@ -1,0 +1,51 @@
+{
+  "name": "pretty-lua-errors",
+  "displayName": "Pretty Lua Errors",
+  "description": "Beautiful, beginner-friendly error messages for Lua developers.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pretty-lua-errors.runScript",
+        "title": "Run Lua with Pretty Errors"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "pretty-lua-errors.runScript",
+          "group": "navigation",
+          "when": "resourceLangId == lua"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Pretty Lua Errors",
+      "properties": {
+        "prettyLuaErrors.executablePath": {
+          "type": "string",
+          "default": "lua",
+          "description": "The absolute file path to the lua executable. Leave as 'lua' if it is globally configured in your system environment path variables."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.x.x"
+  }
+}
