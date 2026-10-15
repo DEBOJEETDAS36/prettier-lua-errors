@@ -3,10 +3,17 @@
   "displayName": "Pretty Lua Errors",
   "description": "Beautiful, beginner-friendly error messages for Lua developers.",
   "version": "0.0.1",
+  "publisher": "DebojeetDas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEBOJEETDAS36/prettier-lua-errors.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Linters",
     "Other"
   ],
   "activationEvents": [],
